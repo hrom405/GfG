@@ -7,28 +7,23 @@ public class GFG {
 
 		Scanner sc = new Scanner(System.in);
 		int T = sc.nextInt();
+		int p = 0, q = 0, f = 0;
 		while (T-- > 0) {
 			int num = sc.nextInt();
-			check(num);
-			//System.out.println();
-		}
-	}
-
-	private static void check(int num) {
-		int abc;
-		for (int i = 3; i < num; i++) {
-			if (isPrimeNumber(i)) {
-				for (int j = 3; j < num; j++) {
-					abc = 0;
-					if (isPrimeNumber(j)) {
-						abc = i + j;
-						if (abc == num) {
-							System.out.println(i + " " + j);
-							break;
-						}
+			for (int i = 3; i <= num; i++) {
+				if (isPrimeNumber(i)) {
+					p = num - i;
+					if (isPrimeNumber(p)) {
+						q = i;
+						f = 1;
+						break;
+					} else {
+						continue;
 					}
 				}
 			}
+			if (f == 1)
+				System.out.println(q + " " + p);
 		}
 	}
 
