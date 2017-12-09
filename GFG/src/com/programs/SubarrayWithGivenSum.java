@@ -5,34 +5,39 @@ import java.util.Scanner;
 public class SubarrayWithGivenSum {
 
 	public static void main(String[] args) {
+		int T, n, s, sum, start, end, flag;
 		Scanner sc = new Scanner(System.in);
-		int T = sc.nextInt();
+		T = sc.nextInt();
 		while (T-- > 0) {
-			int n = sc.nextInt();
-			int sum = sc.nextInt();
+			n = sc.nextInt();
+			s = sc.nextInt();
 			int num;
-			int[] arr = new int[n];
+			int[] a = new int[n];
 
 			for (int i = 0; i < n; i++)
-				arr[i] = sc.nextInt();
+				a[i] = sc.nextInt();
 
-			for (int i = 0; i < n; i++) {
-				num = 0;
-				boolean hey = false;
-				for (int j = i; j < n; j++) {
-					num += arr[j];
-					if (num == sum) {
-						System.out.print((i + 1) + " " + (j + 1));
-						hey = true;
-						break;
-					}
-				}
-				if (hey == true)
+			sum = 0;
+			flag = 0;
+			start = 0;
+			end = 0;
+
+			while (n > end) {
+				sum += a[end];
+				if (sum > s) {
+					start++;
+					end = start;
+					sum = 0;
+				} else if (sum == s) {
+					flag = 1;
 					break;
-				else
-					System.out.println();
+				} else
+					end++;
 			}
-			System.out.println();
+			if (flag == 1)
+				System.out.println((start + 1) + " " + (end + 1));
+			else
+				System.out.println(-1);
 		}
 	}
 }
