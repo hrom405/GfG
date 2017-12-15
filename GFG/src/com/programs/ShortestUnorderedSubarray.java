@@ -24,6 +24,7 @@ public class ShortestUnorderedSubarray {
 		int p = 2;
 		if (a.length < 3)
 			return 0;
+		
 		else {
 			for (int i = 1; i < a.length - 1; i++) {
 				if (a[i - 1] < a[i] && a[i + 1] < a[i]) {
