@@ -30,7 +30,6 @@ public class FindMinTime {
 					max = c;
 			}
 			System.out.println(max);
-			
 		}
 	}
 
