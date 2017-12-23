@@ -1,6 +1,7 @@
 package com.programs;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class MergeTwoSortedArrays {
@@ -17,7 +18,8 @@ public class MergeTwoSortedArrays {
 				a[i] = sc.nextInt();
 			}
 			Arrays.sort(a);
-			reverse(a);
+			Collections.reverse(Arrays.asList(a));
+			//reverse(a);
 			for (int i = 0; i < a.length; i++) {
 				System.out.print(a[i] + " ");
 			}
@@ -25,12 +27,12 @@ public class MergeTwoSortedArrays {
 		}
 	}
 
-	public static int[] reverse(int[] data) {
+	/*public static int[] reverse(int[] data) {
 		for (int left = 0, right = data.length - 1; left < right; left++, right--) {
 			int temp = data[left];
 			data[left] = data[right];
 			data[right] = temp;
 		}
 		return data;
-	}
+	}*/
 }
