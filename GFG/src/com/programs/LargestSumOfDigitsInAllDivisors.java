@@ -1,5 +1,6 @@
 package com.programs;
 
+/**https://practice.geeksforgeeks.org/problems/largest-sum-of-digits-in-all-divisors/0/?ref=self*/
 import java.util.Scanner;
 
 public class LargestSumOfDigitsInAllDivisors {
