@@ -1,5 +1,6 @@
 package com.programs;
 
+/*https://practice.geeksforgeeks.org/problems/factorial-number/0/?ref=self*/
 import java.util.Scanner;
 
 public class FactorialNumber {
@@ -8,25 +9,20 @@ public class FactorialNumber {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
 		while (t-- > 0) {
-			int n = sc.nextInt();
-			if (check(n))
+			long i, j, fact = 1, flag = 0, lim;
+			lim = sc.nextInt();
+			for (i = 1; fact <= lim; i++) {
+				fact = fact * i;
+				if (fact == lim) {
+					flag = 1;
+					break;
+				}
+			}
+			if (flag == 1) {
 				System.out.println(1);
-			else
-				System.out.println(0);
-		}
-	}
-
-	private static boolean check(int n) {
-		boolean isFact = false;
-		for (int i = 2; i < Math.sqrt(n); i++) {
-			if (n % i == 0) {
-				n/=i;
-				isFact = true;
 			} else {
-				isFact = false;
-				break;
+				System.out.println(0);
 			}
 		}
-		return isFact;
 	}
 }

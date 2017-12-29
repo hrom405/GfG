@@ -1,5 +1,6 @@
 package com.programs;
 
+/*https://practice.geeksforgeeks.org/problems/sexy-primes/0/?ref=self*/
 import java.util.Scanner;
 
 public class SexyPrimes {

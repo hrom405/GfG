@@ -1,8 +1,9 @@
 package com.programs;
 
+/*https://practice.geeksforgeeks.org/problems/2s-complement/0/?ref=self*/
 import java.util.Scanner;
 
-public class TwosCompliment {
+public class TwosComplement {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
