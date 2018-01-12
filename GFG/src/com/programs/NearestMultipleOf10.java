@@ -1,5 +1,7 @@
 package com.programs;
 
+/*https://practice.geeksforgeeks.org/problems/nearest-multiple-of-10/0/?ref=self*/
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class NearestMultipleOf10 {
@@ -8,14 +10,16 @@ public class NearestMultipleOf10 {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
 		while (t-- > 0) {
-			int n = sc.nextInt();
-			System.out.println(check(n));
+			BigInteger n = sc.nextBigInteger();
+			BigInteger ten = new BigInteger("10");
+			BigInteger five = new BigInteger("5");
+			BigInteger r = n.remainder(BigInteger.valueOf(10));
+			if (r.compareTo(five) < 1)
+				System.out.println(n.subtract(r));
+			else {
+				r = ten.subtract(r);
+				System.out.println(n.add(r));
+			}
 		}
-	}
-
-	static int check(int n) {
-		int a = (n / 10) * 10;
-		int b = a + 10;
-		return (n - a > b - n) ? b : a;
 	}
 }
