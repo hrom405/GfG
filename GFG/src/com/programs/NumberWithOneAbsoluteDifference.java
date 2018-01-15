@@ -1,5 +1,6 @@
 package com.programs;
 
+/*https://practice.geeksforgeeks.org/problems/numbers-with-one-absolute-difference/0/?ref=self*/
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
