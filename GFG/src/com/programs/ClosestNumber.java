@@ -14,7 +14,6 @@ public class ClosestNumber {
 			System.out.println(closestNumber(n, m));
 		}
 	}
-
 	public static int closestNumber(int n, int m) {
 		int q = n / m;
 		System.out.println(q);
