@@ -33,6 +33,7 @@ public class EaseTheArray {
 			for (int i = 0; i < ab.length; i++) {
 				System.out.print(ab[i] + " ");
 			}
+			System.out.println();
 		}
 	}
 }
