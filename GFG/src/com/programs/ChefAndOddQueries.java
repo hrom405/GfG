@@ -1,26 +1,32 @@
 package com.programs;
-
 /*https://www.codechef.com/FEB18/problems/CHANOQ*/
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class ChefAndOddQueries {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
+	public static void main(String[] args) throws IOException {
+		// Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int t = Integer.parseInt(br.readLine());
 		while (t-- > 0) {
-			int n = sc.nextInt();
+			int n = Integer.parseInt(br.readLine());
 			int[] a = new int[n * 2];
-			for (int i = 0; i < a.length; i++) {
-				a[i] = sc.nextInt();
+			for (int i = 0; i < n; i++) {
+				// a[i] = Integer.parseInt(br.readLine());
+				String num[] = br.readLine().split(" ");
+				a[i * 2] = Integer.parseInt(num[0]);
+				a[(i * 2) + 1] = Integer.parseInt(num[1]);
 			}
-			int q = sc.nextInt();
+			int q = Integer.parseInt(br.readLine());
 			for (int j = 0; j < q; j++) {
-				int m = sc.nextInt();
+				int m = Integer.parseInt(br.readLine());
 				int x[] = new int[m];
 				for (int k = 0; k < m; k++) {
-					x[k] = sc.nextInt();
+					x[k] = Integer.parseInt(br.readLine());
 				}
 				Arrays.sort(x);
 				int cnt = 0;
