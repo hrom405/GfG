@@ -53,17 +53,22 @@ public class BinarySearchTree {
 		}
 	}
 
+	public int totalHeight = 0;
+
 	int maxDepth(Node node) {
 		if (node == null)
-			return 0;
+			return -1;
 		else {
 			int lDepth = maxDepth(node.left);
 			int rDepth = maxDepth(node.right);
 
-			if (lDepth > rDepth)
+			if (lDepth > rDepth) {
+				totalHeight += Math.abs(lDepth);
 				return (lDepth + 1);
-			else
+			} else {
+				totalHeight += Math.abs(rDepth);
 				return (rDepth + 1);
+			}
 		}
 	}
 
@@ -75,10 +80,9 @@ public class BinarySearchTree {
 			tree.insert(arr[i]);
 		}
 		tree.inorder();
-		a[0] = tree.maxDepth(tree.root);
-		a[1] = 1;
+		a[0] = tree.maxDepth(tree.root) - 1;
+		a[1] = tree.totalHeight;
 		return a;
-
 	}
 
 	private static final Scanner scan = new Scanner(System.in);
