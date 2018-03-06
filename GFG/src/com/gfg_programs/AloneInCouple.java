@@ -2,6 +2,7 @@ package com.gfg_programs;
 
 /*https://practice.geeksforgeeks.org/problems/alone-in-couple/0/?ref=self*/
 import java.util.Scanner;
+//sorry
 
 public class AloneInCouple {
 
