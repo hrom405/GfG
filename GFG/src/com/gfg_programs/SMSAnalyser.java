@@ -2,7 +2,7 @@ package com.gfg_programs;
 
 import java.util.Scanner;
 
-public class SMSAnalyzer {
+public class SMSAnalyser {
 	static String[] str = { "love", "babe", "sweety", "life" };
 
 	public static void main(String[] args) {
